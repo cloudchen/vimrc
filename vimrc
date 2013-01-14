@@ -164,3 +164,8 @@ noremap <leader>fb :FufBuffer<CR>
 noremap <leader>fu :FufRenewCache<CR>
 noremap <leader>fm :FufBookmarkFile<CR>
 noremap <leader>fma :FufBookmarkFileAdd<CR>
+
+"html indent
+let g:html_indent_inctags = "head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
