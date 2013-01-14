@@ -5,7 +5,10 @@ function! public#MyTabLabel(n)
 
     for bufnr in buflist
         if getbufvar(bufnr, '&modified')             " unsaved modified buffer?
-            let label .= '+'
+            let label .= '  +'
+            break
+        else
+            let label .= ' '
             break
         endif
     endfor
@@ -15,6 +18,7 @@ function! public#MyTabLabel(n)
         let label .= ' ' . wincount                  " report how many windows
     endif
 
+
     let winnr    = tabpagewinnr(a:n)               " focused window number
     let fullname = bufname(buflist[winnr - 1])     " absolute file name
     let filename = fnamemodify(fullname, ':t')     " basename
@@ -23,7 +27,7 @@ function! public#MyTabLabel(n)
         let filename = '[No Name]'
     endif
 
-    let label .= '  ' . filename . ' '              " add filename to label
+    let label .= ' ' . filename . ' '              " add filename to label
     return label
 endfunction
 
