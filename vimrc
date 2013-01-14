@@ -11,6 +11,12 @@ set history=300
 set autoread
 set updatetime=3000
 set helplang=cn
+if exists("+autochdir")
+    set autochdir
+else
+    "Set working directory to the current file automtically
+    autocmd BufEnter * lcd %:p:h
+endif
 syntax on
 filetype plugin on
 filetype indent on
