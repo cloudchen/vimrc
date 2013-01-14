@@ -28,6 +28,7 @@ set scrolloff=7
 set linespace=2
 set equalalways
 set showtabline=1
+set tabline=%!public#MyTabLine()
 set title
 set titlestring=%{getcwd()}/%t@%{hostname()}%m[%n]%=\ %P
 set statusline=%<[%l,%L]%f%h%m%r%h%w%y[%{&ff}][%{&fenc}]\ %{strftime(\"%y/%m/%d-%H:%M:%S\",getftime(expand(\"%:p\")))}%=Col:%c%V\ Pos:%o\ ASCII:%b\ Hex:%B
