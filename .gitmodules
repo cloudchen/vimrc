@@ -4,3 +4,6 @@
 [submodule "bundle/peaksea"]
 	path = bundle/peaksea
 	url = https://github.com/vim-scripts/peaksea.git
+[submodule "bundle/FuzzyFinder"]
+	path = bundle/FuzzyFinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git

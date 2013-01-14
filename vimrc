@@ -131,3 +131,29 @@ map <C-l> <C-W>l
 map <silent> <F1> :tabnew<CR>
 map <silent> <F2> gT
 map <silent> <F3> gt
+
+"FuzzyFind
+let g:fuf_buffer_keyDelete="<C-d>"
+let g:fuf_mrufile_keyExpand="<C-d>"
+let g:fuf_bookmark_keyDelete='<C-d>'
+let g:fuf_bookmarkdir_keyDelete='<C-d>'
+let g:fuf_modesDisable=['help', 'changelist', 'line']
+let g:fuf_keySwitchMatching='<C-f>'
+let g:fuf_enumeratingLimit=50
+let g:fuf_maxMenuWidth=200
+let g:fuf_previewHeight = 20
+let g:fuf_autoPreview = 0
+let g:fuf_file_exclude = '\v\~$|\.(DS_Store)$|(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
+let g:fuf_dir_exclude = '\v(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
+let g:fuf_mrufile_maxItem=400
+let g:fuf_mrucmd_maxItem=200
+
+noremap <leader>ff :FufFileWithCurrentBufferDir<CR>
+noremap <leader>fd :FufFile<CR>
+noremap <leader>fr :FufMruFile<CR>
+noremap <leader>frr :FufMruFileInCwd<CR>
+noremap <leader>fc :FufMruCmd<CR>
+noremap <leader>fb :FufBuffer<CR>
+noremap <leader>fu :FufRenewCache<CR>
+noremap <leader>fm :FufBookmarkFile<CR>
+noremap <leader>fma :FufBookmarkFileAdd<CR>
