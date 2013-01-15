@@ -26,6 +26,7 @@ set confirm
 set number
 set numberwidth=4
 set wildmenu
+set wildignore+=.DS_Store
 set showcmd
 set ruler
 set showmode
