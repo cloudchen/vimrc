@@ -139,6 +139,9 @@ map <silent> <F1> :tabnew<CR>
 map <silent> <F2> gT
 map <silent> <F3> gt
 
+"Fast editing of the .vimrc
+map <silent> <leader>e :e! ~/.vim/vimrc<CR>
+
 "FuzzyFind
 let g:fuf_buffer_keyDelete="<C-d>"
 let g:fuf_mrufile_keyExpand="<C-d>"
@@ -152,6 +155,7 @@ let g:fuf_previewHeight = 20
 let g:fuf_autoPreview = 0
 let g:fuf_file_exclude = '\v\~$|\.(DS_Store)$|(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
 let g:fuf_dir_exclude = '\v(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
+let g:fuf_mrufile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|sw[po])$|(COMMIT_EDITMSG)$|^(\/\/|\\\\|\/mnt\/|\/media\/)'
 let g:fuf_mrufile_maxItem=400
 let g:fuf_mrucmd_maxItem=200
 
