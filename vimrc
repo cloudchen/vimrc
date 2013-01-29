@@ -1,5 +1,6 @@
 "pathogen
 execute pathogen#infect()
+execute pathogen#helptags()
 
 "global
 set nocompatible
@@ -126,6 +127,9 @@ let mapleader = ","
 let g:mapleader = ","
 set timeoutlen=300
 
+"[Y] Yank until the end (as D does by default)
+nnoremap Y y$
+
 "Clear searching highlight
 map <silent> <leader>, :noh<CR>
 
@@ -139,6 +143,8 @@ map <C-l> <C-W>l
 map <silent> <F1> :tabnew<CR>
 map <silent> <F2> gT
 map <silent> <F3> gt
+
+map <silent> <C-TAB> <C-^>
 
 "Fast editing of the .vimrc
 map <silent> <leader>e :e! ~/.vim/vimrc<CR>
@@ -171,6 +177,6 @@ noremap <leader>fm :FufBookmarkFile<CR>
 noremap <leader>fma :FufBookmarkFileAdd<CR>
 
 "html indent
-let g:html_indent_inctags = "head,tbody"
+let g:html_indent_inctags = "head,tbody,p"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
