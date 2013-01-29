@@ -9,5 +9,6 @@ set guitablabel=%{public#TabLabel()}%t
 set guifont=Monaco:h12,\ Courier_New:h9
 if(has("win32") || has("win95") || has("win64") || has("win16"))
     set guifontwide=SimHei:h9
-end if
+    au GUIEnter * simalt ~x
+endif
 winpos 0 0
