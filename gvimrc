@@ -8,6 +8,7 @@ set guioptions+=ce
 set guitablabel=%{public#TabLabel()}%t
 set guifont=Monaco:h12,\ Courier_New:h9
 if(has("win32") || has("win95") || has("win64") || has("win16"))
+    source $VIMRUNTIME/mswin.vim
     set guifontwide=SimHei:h9
     au GUIEnter * simalt ~x
 endif
