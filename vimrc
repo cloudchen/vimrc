@@ -16,6 +16,8 @@ Bundle 'vim-scripts/peaksea'
 Bundle 'cloudchen/vim-javascript'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'groenewege/vim-less'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'wincent/Command-T'
 
  " vim-scripts repos
 Bundle 'L9'
