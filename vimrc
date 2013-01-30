@@ -1,3 +1,27 @@
+"Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'tomasr/molokai'
+Bundle 'vim-scripts/peaksea'
+Bundle 'cloudchen/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'groenewege/vim-less'
+
+ " vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'matchit.zip'
+
 "pathogen
 execute pathogen#infect()
 execute pathogen#helptags()
