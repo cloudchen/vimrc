@@ -144,7 +144,12 @@ map <silent> <F1> :tabnew<CR>
 map <silent> <F2> gT
 map <silent> <F3> gt
 
+"Quickly swith between alternate file
 map <silent> <C-TAB> <C-^>
+
+"restore previous state for all files
+autocmd BufWinLeave * silent! mkview
+autocmd BufWinEnter * silent! loadview
 
 "Fast editing of the .vimrc
 map <silent> <leader>e :e! ~/.vim/vimrc<CR>
