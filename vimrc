@@ -19,6 +19,8 @@ Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 
  " vim-scripts repos
 Bundle 'L9'
@@ -213,3 +215,9 @@ noremap <leader>fma :FufBookmarkFileAdd<CR>
 let g:html_indent_inctags="head,tbody,p"
 let g:html_indent_script1="inc"
 let g:html_indent_style1="inc"
+
+"vim-nerdtree-tabs
+let g:nerdtree_tabs_open_on_gui_startup=0
+let g:nerdtree_tabs_synchronize_focus=0
+let g:nerdtree_tabs_focus_on_files=1
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
