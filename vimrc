@@ -149,8 +149,9 @@ if has("persistent_undo")
 endif
 
 "key mapping
-let mapleader = ","
-let g:mapleader = ","
+let mapleader=","
+let g:mapleader=","
+noremap \ ,
 set timeoutlen=300
 
 "[Y] Yank until the end (as D does by default)
@@ -208,6 +209,6 @@ noremap <leader>fm :FufBookmarkFile<CR>
 noremap <leader>fma :FufBookmarkFileAdd<CR>
 
 "html indent
-let g:html_indent_inctags = "head,tbody,p"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
+let g:html_indent_inctags="head,tbody,p"
+let g:html_indent_script1="inc"
+let g:html_indent_style1="inc"
