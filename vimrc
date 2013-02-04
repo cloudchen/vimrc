@@ -221,3 +221,8 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_synchronize_focus=0
 let g:nerdtree_tabs_focus_on_files=1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+"syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
