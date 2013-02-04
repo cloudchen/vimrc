@@ -21,6 +21,7 @@ Bundle 'wincent/Command-T'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'tpope/vim-unimpaired'
 
  " vim-scripts repos
 Bundle 'L9'
