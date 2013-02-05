@@ -22,6 +22,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-surround'
 
  " vim-scripts repos
 Bundle 'L9'
