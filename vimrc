@@ -18,6 +18,7 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'wincent/Command-T'
+Bundle 'tpope/vim-surround'
 
  " vim-scripts repos
 Bundle 'L9'
