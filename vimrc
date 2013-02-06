@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 "My Bundles here:
 "
 "original repos on github
+Bundle 'ahao/vimcdoc'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'tomasr/molokai'
 Bundle 'vim-scripts/peaksea'
