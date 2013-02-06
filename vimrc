@@ -3,13 +3,13 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-" let Vundle manage Vundle
-" required!
+"let Vundle manage Vundle
+"required!
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
+"My Bundles here:
 "
-" original repos on github
+"original repos on github
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'tomasr/molokai'
 Bundle 'vim-scripts/peaksea'
@@ -23,8 +23,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
 
- " vim-scripts repos
+"vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'matchit.zip'
