@@ -25,6 +25,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'plasticboy/vim-markdown'
 
 "vim-scripts repos
 Bundle 'L9'
