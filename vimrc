@@ -26,6 +26,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'mattn/zencoding-vim'
 
 "vim-scripts repos
 Bundle 'L9'
@@ -234,3 +235,6 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_auto_loc_list=0
 let g:syntastic_loc_list_height=5
+
+"zencoding
+let g:user_zen_mode='a'    "enable all function in all mode.
