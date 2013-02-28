@@ -149,6 +149,9 @@ if has("multi_byte")
     augroup END
 endif
 
+"IME
+set noimdisable "automatically switch off IME when return to normal model
+
 "persistent undo
 if has("persistent_undo")
     if !isdirectory($HOME."/.vim/undo")
