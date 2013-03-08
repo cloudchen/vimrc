@@ -129,6 +129,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set grepprg=grep\ -nHI
+set nogdefault
 
 "auto complete
 set completeopt=longest,menu
