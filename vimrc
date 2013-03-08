@@ -28,6 +28,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'mattn/zencoding-vim'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'airblade/vim-gitgutter'
 
 "vim-scripts repos
 Bundle 'L9'
