@@ -152,7 +152,8 @@ if has("multi_byte")
 endif
 
 "IME
-set noimdisable "automatically switch off IME when return to normal model
+"temporarily comment noimdisable since it doesn't work as expected
+"set noimdisable "automatically switch off IME when return to normal model
 
 "persistent undo
 if has("persistent_undo")
