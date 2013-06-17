@@ -89,7 +89,7 @@ set background=dark
 colorscheme molokai
 
 "session restore
-set sessionoptions=buffers,sesdir,folds,help,slash,tabpages,unix,winpos
+set sessionoptions=buffers,curdir,folds,help,slash,tabpages,unix,winpos
 set viewoptions=cursor,folds,slash,unix
 set viminfo='500,f1,%,<500,:500,@500,/500,s10,h
 set viewdir=~/.vim/view
