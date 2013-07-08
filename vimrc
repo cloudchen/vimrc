@@ -32,6 +32,8 @@ Bundle 'nelstrom/vim-visual-star-search'
 "Bundle 'airblade/vim-gitgutter'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'bootleq/gsession.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'majutsushi/tagbar'
 
 "vim-scripts repos
 Bundle 'L9'
@@ -248,3 +250,6 @@ let g:syntastic_loc_list_height=5
 
 "zencoding
 let g:user_zen_mode='a'    "enable all function in all mode.
+
+"tagbar
+nnoremap <F5> :TagbarToggle<CR>
