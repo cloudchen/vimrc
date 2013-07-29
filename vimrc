@@ -142,7 +142,9 @@ set completeopt=longest,menu
 
 "encoding
 set fileformats=unix,dos,mac
-set fileformat=unix
+if &modifiable
+    set fileformat=unix
+endif
 set nobomb
 if has("multi_byte")
     set encoding=utf-8
