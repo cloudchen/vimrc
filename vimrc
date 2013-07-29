@@ -185,6 +185,10 @@ nnoremap Y y$
 "Clear searching highlight
 map <silent> <leader>, :noh<CR>
 
+"Make <c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
 "Smart way to move windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
