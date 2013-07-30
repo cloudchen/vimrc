@@ -27,6 +27,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-rails'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'mattn/zencoding-vim'
 Bundle 'nelstrom/vim-visual-star-search'
@@ -55,12 +56,6 @@ set history=300
 set autoread
 set updatetime=3000
 set helplang=cn
-if exists("+autochdir")
-    set autochdir
-else
-    "Set working directory to the current file automtically
-    autocmd BufEnter * lcd %:p:h
-endif
 syntax on
 filetype plugin on
 filetype indent on
@@ -210,6 +205,9 @@ map <silent> <C-TAB> <C-^>
 autocmd BufWinLeave * silent! mkview
 autocmd BufWinEnter * silent! loadview
 
+"Set working directory to the current file automtically
+autocmd BufEnter * lcd %:p:h "Using autocmd to change current directory is better than autochdir command
+
 "Fast editing of the .vimrc
 map <silent> <leader>e :e! ~/.vim/vimrc<CR>
 
@@ -267,3 +265,6 @@ nnoremap <F5> :TagbarToggle<CR>
 
 "Ack
 noremap <Leader>k :Ack <cword><CR>
+
+"vim-rails
+autocmd BufEnter * silent! if exists(":Rlcd") | Rlcd | endif "Change current directory to rails project's root directory
