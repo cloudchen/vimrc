@@ -264,3 +264,6 @@ let g:user_zen_mode='a'    "enable all function in all mode.
 
 "tagbar
 nnoremap <F5> :TagbarToggle<CR>
+
+"Ack
+noremap <Leader>k :Ack <cword><CR>
