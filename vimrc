@@ -140,6 +140,9 @@ set nogdefault
 "auto complete
 set completeopt=longest,menu
 
+"dictionary
+set dictionary+=/usr/share/dict/words "most *NIX systems have this dictionary file
+
 "encoding
 set fileformats=unix,dos,mac
 if &modifiable
