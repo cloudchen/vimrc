@@ -119,7 +119,7 @@ endtry
 set nolist
 
 "match bracket
-set showmatch "jump to matching left backet when keyup
+set showmatch "jump to matching left bracket when keyup
 set matchtime=2
 set matchpairs+=<:>
 
@@ -202,22 +202,23 @@ map <silent> <F1> :tabnew<CR>
 map <silent> <F2> gT
 map <silent> <F3> gt
 
-"Quickly swith between alternate file
+"Quickly switch between alternate file
 map <silent> <C-TAB> <C-^>
 
 "restore previous state for all files
 autocmd BufWinLeave * silent! mkview
 autocmd BufWinEnter * silent! loadview
 
-"Set working directory to the current file automtically
+"Set working directory to the current file automatically
 autocmd BufEnter * lcd %:p:h "Using autocmd to change current directory is better than autochdir command
 
 "Fast editing of the .vimrc
 map <silent> <leader>e :e! ~/.vim/vimrc<CR>
 
+"Automatically close quick-fix window if it's last window
 autocmd BufEnter * call public#AutoCloseLastQuickFixWindow()
 
-"FuzzyFind
+"FuzzyFinder
 let g:fuf_buffer_keyDelete="<C-d>"
 let g:fuf_mrufile_keyExpand="<C-d>"
 let g:fuf_bookmark_keyDelete='<C-d>'
