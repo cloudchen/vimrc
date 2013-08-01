@@ -177,6 +177,10 @@ let g:mapleader=","
 noremap \ ,
 set timeoutlen=300
 
+"spell checking
+"Pressing <L>c toggles spell checking
+nnoremap <Leader>c :setlocal spell!<CR>
+
 "[Y] Yank until the end (as D does by default)
 nnoremap Y y$
 
