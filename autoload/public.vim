@@ -53,7 +53,7 @@ function! public#MyTabLine()
 endfunction
 
 " custome GUI tab label
-function public#TabLabel()
+function! public#TabLabel()
     let label = ''
     let bufnrlist = tabpagebuflist(v:lnum)
 
@@ -76,4 +76,15 @@ function public#TabLabel()
     endif
 
     return label
+endfunction
+
+"Close quick-fix window if it's last on screen
+function! public#AutoCloseLastQuickFixWindow()
+  " if the window is quickfix go on
+  if &buftype=="quickfix"
+    " if this window is last on screen quit without warning
+    if winbufnr(2) == -1
+      quit!
+    endif
+  endif
 endfunction

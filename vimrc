@@ -211,6 +211,8 @@ autocmd BufEnter * lcd %:p:h "Using autocmd to change current directory is bette
 "Fast editing of the .vimrc
 map <silent> <leader>e :e! ~/.vim/vimrc<CR>
 
+autocmd BufEnter * call public#AutoCloseLastQuickFixWindow()
+
 "FuzzyFind
 let g:fuf_buffer_keyDelete="<C-d>"
 let g:fuf_mrufile_keyExpand="<C-d>"
