@@ -189,36 +189,43 @@ nnoremap <Leader>c :setlocal spell!<CR>
 "[Y] Yank until the end (as D does by default)
 nnoremap Y y$
 
-"Clear searching highlight
-map <silent> <leader>, :noh<CR>
+"Close current window quickly
+nnoremap <silent> <leader>w :quit<CR>
 
-"Make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
+"Clear searching highlight
+nnoremap <silent> <leader>, :noh<CR>
+
+"Make <C-L> clear the highlight as well as redraw
+"nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
-"Smart way to move windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"Easy way to move between windows
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
 
 "move between tabs
-map <silent> <F1> :tabnew<CR>
-map <silent> <F2> gT
-map <silent> <F3> gt
+nnoremap <silent> <F1> :tabnew<CR>
+nnoremap <silent> <F2> gT
+nnoremap <silent> <F3> gt
+inoremap <silent> <F1> <ESC>:tabnew<CR>
+inoremap <silent> <F2> <ESC>gT
+inoremap <silent> <F3> <ESC>gt
+
 
 "Quickly switch between alternate file
-map <silent> <C-TAB> <C-^>
+nnoremap <silent> <C-TAB> <C-^>
 
 "restore previous state for all files
 autocmd BufWinLeave * silent! mkview
 autocmd BufWinEnter * silent! loadview
 
 "Set working directory to the current file automatically
-autocmd BufEnter * lcd %:p:h "Using autocmd to change current directory is better than autochdir command
+autocmd BufEnter * silent! lcd %:p:h "Using autocmd to change current directory is better than autochdir command
 
 "Fast editing of the .vimrc
-map <silent> <leader>e :e! ~/.vim/vimrc<CR>
+nnoremap <silent> <leader>e :e! ~/.vim/vimrc<CR>
 
 "Automatically close quick-fix window if it's last window
 autocmd BufEnter * call public#AutoCloseLastQuickFixWindow()
