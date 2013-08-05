@@ -236,6 +236,7 @@ let g:fuf_autoPreview = 0
 let g:fuf_file_exclude = '\v\~$|\.(DS_Store)$|(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
 let g:fuf_dir_exclude = '\v(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
 let g:fuf_mrufile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|sw[po])$|(COMMIT_EDITMSG)$|^(\/\/|\\\\|\/mnt\/|\/media\/)'
+let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|sw[po])$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|vendor|node_modules|image[s]|asset[s]|_output|bin|dist|bower_components)'
 let g:fuf_mrufile_maxItem=400
 let g:fuf_mrucmd_maxItem=200
 
@@ -248,6 +249,7 @@ noremap <leader>fb :FufBuffer<CR>
 noremap <leader>fu :FufRenewCache<CR>
 noremap <leader>fm :FufBookmarkFile<CR>
 noremap <leader>fma :FufBookmarkFileAdd<CR>
+noremap <leader>fa :FufCoverageFile<CR>
 
 "html indent
 let g:html_indent_inctags="head,tbody,p"
