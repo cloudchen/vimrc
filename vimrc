@@ -272,7 +272,15 @@ let g:syntastic_html_tidy_ignore_errors=['trimming empty']
 let g:user_zen_mode='a'    "enable all function in all mode.
 
 "tagbar
+let g:tagbar_sort=0
+"let g:tagbar_compact=1
+let g:tagbar_autofocus=1
+let g:tagbar_indent=1
+let g:tagbar_expand=1
+let g:tagbar_singleclick=1
+let g:tagbar_autoshowtag=1
 nnoremap <F5> :TagbarToggle<CR>
+inoremap <F5> <ESC>:TagbarToggle<CR>
 
 "fugitive
 nnoremap <silent> <leader>gs :Gstatus<CR>
