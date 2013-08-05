@@ -282,3 +282,6 @@ noremap <Leader>k :Ack <cword><CR>
 
 "vim-rails
 autocmd BufEnter * silent! if exists(":Rlcd") | Rlcd | endif "Change current directory to rails project's root directory
+
+"vim-javascript
+let javascript_enable_domhtmlcss=1
