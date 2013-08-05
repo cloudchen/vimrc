@@ -251,6 +251,11 @@ noremap <leader>fm :FufBookmarkFile<CR>
 noremap <leader>fma :FufBookmarkFileAdd<CR>
 noremap <leader>fa :FufCoverageFile<CR>
 
+"CommandT
+let g:CommandTCancelMap="<ESC>"
+let g:CommandTMatchWindowAtTop=1
+let g:CommandTMaxHeight=20
+
 "html indent
 let g:html_indent_inctags="head,tbody,p"
 let g:html_indent_script1="inc"
