@@ -135,6 +135,7 @@ set ignorecase
 set smartcase
 set grepprg=grep\ -nHI
 set nogdefault
+set iskeyword+=-
 
 "auto complete
 set completeopt=longest,menu
