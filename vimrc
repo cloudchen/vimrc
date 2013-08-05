@@ -77,7 +77,11 @@ set showtabline=1
 set tabline=%!public#MyTabLine()
 set title
 set titlestring=%f\ %m[%n]\ %{getcwd()}@%{hostname()}%=\ %P
-set statusline=%<[%l,%L]%f%h%m%r%h%w%y[%{&ff}][%{&fenc}]\ %{strftime(\"%y/%m/%d-%H:%M:%S\",getftime(expand(\"%:p\")))}%=Col:%c%V\ Pos:%o\ ASCII:%b\ Hex:%B
+set statusline=%<[%l,%L]%f%h%m%r%h%w%y[%{&ff}][%{&fenc}]
+if isdirectory($HOME . "/.vim/bundle/vim-fugitive") "Use folder detection rather than function detection because it's early to detect exists('*fugitive#statusline')
+    set statusline+=%{fugitive#statusline()}
+endif
+set statusline+=\ %{strftime(\"%y/%m/%d-%H:%M:%S\",getftime(expand(\"%:p\")))}%=Col:%c%V\ Pos:%o\ ASCII:%b\ Hex:%B
 
 "color
 if !has("gui_running")
@@ -269,6 +273,9 @@ let g:user_zen_mode='a'    "enable all function in all mode.
 
 "tagbar
 nnoremap <F5> :TagbarToggle<CR>
+
+"fugitive
+nnoremap <silent> <leader>gs :Gstatus<CR>
 
 "Ack
 noremap <Leader>k :Ack <cword><CR>
