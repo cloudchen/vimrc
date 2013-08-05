@@ -258,7 +258,8 @@ let g:html_indent_style1="inc"
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_synchronize_focus=0
 let g:nerdtree_tabs_focus_on_files=1
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+nnoremap <silent> <F4> :NERDTreeTabsToggle<CR>
+inoremap <silent> <F4> <ESC>:NERDTreeTabsToggle<CR>
 
 "syntastic
 let g:syntastic_check_on_open=1
