@@ -260,9 +260,10 @@ noremap <leader>fma :FufBookmarkFileAdd<CR>
 noremap <leader>fa :FufCoverageFile<CR>
 
 "CommandT
-let g:CommandTCancelMap="<ESC>"
+let g:CommandTCancelMap='<ESC>'
 let g:CommandTMatchWindowAtTop=1
 let g:CommandTMaxHeight=20
+let g:CommandTAcceptSelectionTabMap='<C-l>'
 
 "html indent
 let g:html_indent_inctags="head,tbody,p"
@@ -286,6 +287,8 @@ let g:syntastic_html_tidy_ignore_errors=['trimming empty']
 
 "zencoding
 let g:user_zen_mode='a'    "enable all function in all mode.
+let g:user_zen_leader_key='<c-f>'
+let g:use_zen_complete_tag=1
 
 "tagbar
 let g:tagbar_sort=0
