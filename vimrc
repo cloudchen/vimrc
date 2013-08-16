@@ -29,13 +29,17 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-rails'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'nelstrom/vim-visual-star-search'
 "Bundle 'airblade/vim-gitgutter'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'bootleq/gsession.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'AndrewRadev/vim-coffee-script'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
 
 "vim-scripts repos
 Bundle 'L9'
@@ -286,9 +290,9 @@ let g:syntastic_loc_list_height=5
 let g:syntastic_html_tidy_ignore_errors=['trimming empty']
 
 "zencoding
-let g:user_zen_mode='a'    "enable all function in all mode.
-let g:user_zen_leader_key='<c-f>'
-let g:use_zen_complete_tag=1
+let g:user_emmet_mode='a'    "enable all function in all mode.
+let g:user_emmet_leader_key='<C-f>'
+let g:use_emmet_complete_tag=1
 
 "tagbar
 let g:tagbar_sort=0
@@ -312,3 +316,6 @@ autocmd BufEnter * silent! if exists(":Rlcd") | Rlcd | endif "Change current dir
 
 "vim-javascript
 let javascript_enable_domhtmlcss=1
+
+"vim-airline
+let g:airline_theme="molokai"
