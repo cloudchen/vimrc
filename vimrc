@@ -234,6 +234,9 @@ nnoremap <silent> <leader>e :e! ~/.vim/vimrc<CR>
 "Automatically close quick-fix window if it's last window
 autocmd BufEnter * call public#AutoCloseLastQuickFixWindow()
 
+"Change cwd to current buffer's directory locally
+nnoremap <silent> <leader>cd :lcd %:h<CR>
+
 "FuzzyFinder
 let g:fuf_buffer_keyDelete="<C-d>"
 let g:fuf_mrufile_keyExpand="<C-d>"
