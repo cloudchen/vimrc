@@ -237,6 +237,9 @@ autocmd BufEnter * call public#AutoCloseLastQuickFixWindow()
 "Change cwd to current buffer's directory locally
 nnoremap <silent> <leader>cd :lcd %:h<CR>
 
+"Add custom command to close all invisible buffers
+command! CloseHiddenBuffers call CloseHiddenBuffers()
+
 "FuzzyFinder
 let g:fuf_buffer_keyDelete="<C-d>"
 let g:fuf_mrufile_keyExpand="<C-d>"
