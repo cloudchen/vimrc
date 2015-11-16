@@ -10,41 +10,48 @@ Bundle 'gmarik/vundle'
 "My Bundles here:
 "
 "original repos on github
-Bundle 'ahao/vimcdoc'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'tomasr/molokai'
-Bundle 'vim-scripts/peaksea'
-Bundle 'pangloss/vim-javascript'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'groenewege/vim-less'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'wincent/Command-T'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-rails'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'mattn/emmet-vim'
-Bundle 'nelstrom/vim-visual-star-search'
-"Bundle 'airblade/vim-gitgutter'
-Bundle 'miripiruni/CSScomb-for-Vim'
-Bundle 'bootleq/gsession.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'AndrewRadev/vim-coffee-script'
-Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline'
+Plugin 'ahao/vimcdoc'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/peaksea'
+"Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'wincent/Command-T'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-rails'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mattn/emmet-vim'
+Plugin 'nelstrom/vim-visual-star-search'
+"Plugin 'airblade/vim-gitgutter'
+Plugin 'miripiruni/CSScomb-for-Vim'
+Plugin 'bootleq/gsession.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'AndrewRadev/vim-coffee-script'
+Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
+Plugin 'nono/vim-handlebars'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Raimondi/delimitMate'
+Plugin 'lfilho/cosco.vim'
 
 "vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'matchit.zip'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'matchit.zip'
 
 "pathogen
 execute pathogen#infect()
@@ -86,6 +93,7 @@ if isdirectory($HOME . "/.vim/bundle/vim-fugitive") "Use folder detection rather
     set statusline+=%{fugitive#statusline()}
 endif
 set statusline+=\ %{strftime(\"%y/%m/%d-%H:%M:%S\",getftime(expand(\"%:p\")))}%=Col:%c%V\ Pos:%o\ ASCII:%b\ Hex:%B
+set colorcolumn=100
 
 "color
 if !has("gui_running")
@@ -222,7 +230,7 @@ inoremap <silent> <F3> <ESC>gt
 nnoremap <silent> <C-TAB> <C-^>
 
 "restore previous state for all files
-autocmd BufWinLeave * silent! mkview
+autocmd BufWinLeave,BufHidden * silent! mkview
 autocmd BufWinEnter * silent! loadview
 
 "Set working directory to the current file automatically
@@ -254,7 +262,7 @@ let g:fuf_autoPreview = 0
 let g:fuf_file_exclude = '\v\~$|\.(DS_Store)$|(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
 let g:fuf_dir_exclude = '\v(^|[/\\])\.(hg|git|bzr|svn)($|[/\\])'
 let g:fuf_mrufile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|sw[po])$|(COMMIT_EDITMSG)$|^(\/\/|\\\\|\/mnt\/|\/media\/)'
-let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|sw[po])$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|vendor|node_modules|image[s]|asset[s]|_output|bin|dist|bower_components)'
+let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|sw[po])$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|vendor|node_modules|image[s]|img|asset[s]|_output|bin|dist|bower_components)'
 let g:fuf_mrufile_maxItem=400
 let g:fuf_mrucmd_maxItem=200
 
@@ -325,3 +333,26 @@ let javascript_enable_domhtmlcss=1
 
 "vim-airline
 let g:airline_theme="molokai"
+
+"javascript-libraries-syntax
+let g:used_javascript_libs='jquery,underscore,backbone,requirejs'
+
+"YouCompleteMe
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion=['<Up']
+
+"Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsListSnippets="<c-s-tab>"
+
+"cosco.vim
+autocmd FileType javascript,css nmap <silent> <leader>; :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css inoremap <silent> <leader>; <ESC>:call cosco#commaOrSemiColon()"<CR>a
+
+"coffeescript
+autocmd FileType coffee setl shiftwidth=2
+
+"ruby
+autocmd FileType ruby setl shiftwidth=2 softtabstop=2
